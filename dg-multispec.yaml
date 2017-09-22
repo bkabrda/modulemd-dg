@@ -1,0 +1,14 @@
+version: 1
+specs:
+  distroinfo:
+    fedora:
+      distros:
+        - fedora-26-x86_64
+        - fedora-27-x86_64
+        - fedora-28-x86_64
+      distroletter: f
+  userspace:
+    fancy:
+      shared_userspace: fancy
+    nonfancy:
+      shared_userspace: nonfancy

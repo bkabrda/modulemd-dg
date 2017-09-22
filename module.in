@@ -1,0 +1,15 @@
+document: modulemd
+version: 1
+data:
+  summary: An example summary
+  description: And an example description.
+  license:
+    module:
+      - MIT
+  dependencies:
+    requires:
+      platform: {{ spec.distroletter }}{{ config.os.version }}
+      shared_userspace: {{ spec.shared_userspace }}
+    buildrequires:
+      platform: {{ spec.distroletter }}{{ config.os.version }}
+      shared_userspace: {{ spec.shared_userspace }}
