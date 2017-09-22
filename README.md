@@ -12,7 +12,7 @@ The "multispec" file basically lists "dimensions" of "rendering matrix" (see bel
 * `specs` contain `distroinfo` and `userspace` - these are called "spec groups"; each "spec group" contains named "specs" (in our case these are `fedora` from `distroinfo`, `fancy` and `nonfancy` from `userspace`.
 * The `distroinfo` spec group is mandatory and has to contain at least one spec; additionally, each of its member specs must contain `distros` list (hence limiting set of distros that we can render for).
 * Any other "spec groups" (in our case just `userspace`) are optional and their member specs can contain any values you wish.
-* "Spec groups" and are the "dimensions" of the "rendering matrix", IOW carthesian product of "`distroinfo.distro` specs * `userspace` specs" is a list of all posibilities for which the target file can be rendered. Note that the `distroinfo` member specs are treated differently, as we take their `.distros` listto be part of the matrix dimensions; for other "spec groups", we take their members.
+* "Spec groups" and are the "dimensions" of the "rendering matrix", IOW carthesian product of "`distroinfo.*.distros` list * `userspace` member specs" is a list of all posibilities for which the target file can be rendered. Note that the `distroinfo` member specs are treated differently, as we take their `.distros` list to be part of the matrix dimensions; for other "spec groups", we take their members.
 * Each "spec" contains useful values, e.g. `distroinfo.fedora.distroletter` or `userspace.{fancy,nonfancy}.shared_userspace`.
 
 ## Makefile
